@@ -10,7 +10,7 @@ $( function() {
     },
     slide: function( event, ui ) {
       handle.text( ui.value );
-      speed = 100-ui.value+1;
+      speed = 60-(ui.value/100*60)+1;
     }
   });
 } );
