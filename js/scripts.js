@@ -1,10 +1,10 @@
-var speed = 40;
+var speed = 30;
 var destinations = new Array();
 
 $( function() {
   var handle = $( "#speed-handle" );
   $( "#speed-slider" ).slider({
-    value: 100-speed,
+    value: 100-(speed/60*100),
     create: function() {
       handle.text( $( this ).slider( "value" ) );
     },
