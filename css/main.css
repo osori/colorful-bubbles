@@ -4,7 +4,18 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:-1;
+z-index:100;
+  
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+filter: alpha(opacity=90);
+-moz-opacity:0.9;
+-khtml-opacity: 0.9;
+opacity: 0.9; 
+}
+
+.front {
+  z-index:101;
+  position:relative;
 }
 
 body {

@@ -1,5 +1,6 @@
 var speed = 30;
 var destinations = new Array();
+var numCircles = 50;
 
 $( function() {
   var handle = $( "#speed-handle" );
@@ -13,4 +14,6 @@ $( function() {
       speed = 60-(ui.value/100*60)+1;
     }
   });
+  $('#numBubbles').text(numCircles);
 } );
+

@@ -17,7 +17,7 @@
   <body>
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-centered">
+      <h1 class="title has-text-centered front">
         Colorful Bubbles
       </h1>
       <p class="subtitle has-text-centered">
@@ -25,10 +25,11 @@
       </p>
       <div class="columns is-mobile is-centered">
         <div class="column is-half is-narrow">
-          Speed Control
-          <div id="speed-slider">
+          <span class="front">Speed Control</span>
+          <div class="front" id="speed-slider">
             <div id="speed-handle" class="ui-slider-handle"></div>
           </div>
+          <br> <p class="front"><strong>More bubbles?</strong> Click anywhere on the canvas to create a bubble. <br> <strong>Too many?</strong> Simply click the bubble you wish to remove.</p>
         </div>
       </div>
     </div>
@@ -37,7 +38,8 @@
   <footer>
     <div class="container">
       <div class="container has-text-centered">
-        <strong>Colorful Bubbles</strong> by <a href="http://ilkyu.kr">Ilkyu Ju</a>.
+        There are <strong id="numBubbles" class="front"></strong> bubbles. <br> 
+        <strong>Colorful Bubbles</strong> by <a class="front" href="http://ilkyu.kr">Ilkyu Ju</a>.
       </div>
     </div>
   </footer>
