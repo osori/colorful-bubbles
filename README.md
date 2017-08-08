@@ -1,7 +1,7 @@
 # colorful-bubbles
 Behold these colorful bubbles wander around... 
 
-![screenshot](https://media.giphy.com/media/xT39CXSnHuDJimrabC/giphy.gif)
+![screenshot](https://raw.githubusercontent.com/osori/colorful-bubbles/master/colorful-bubbles.gif)
 
 ## Demo
 You can see the demo here: https://osori.github.io/colorful-bubbles/
