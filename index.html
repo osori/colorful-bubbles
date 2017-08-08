@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colorful Bubbles!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="js/paper-full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+        var red = '#FF0000';
+        var yellow = '#FFBD0D';
+        var blue = '#1000FF';
+        var green = '#8BE800';
+        var skyblue = '#0CDDE8';
+        var colors =[];
+        colors.push(red,yellow,blue,green,skyblue);
+        
+        var numCircles = 55;
+        
+        
+        var path = new Path.Circle({
+          center: [0, 0],
+          radius: 30,
+          fillColor: 'red',
+          strokeColor: 'white',
+          strokeWidth: 0.1,
+          blendMode: 'screen'
+        });
+        
+        var definition = new SymbolDefinition(path);
+        
+        for (var i=0; i<numCircles; i++) {
+          var path = new Path.Circle({
+            center: [0, 0],
+            radius: 30,
+            fillColor: 'red',
+            strokeColor: 'white',
+            blendMode: 'screen'
+          });
+          path.style.fillColor = colors[i % 5];
+          destinations.push(Point.random() * view.size)
+        }
+
+        
+        function onFrame(event){
+          for (var i=0; i<numCircles; i++){
+            var item = project.activeLayer.children[i];
+            var vector = destinations[i] - item.position;
+            
+            item.position += vector / speed;
+            
+            if (vector.length < 5) {
+              destinations[i] = Point.random() * view.size;
+            }
+            
+          }
+        }
+        
+        
+    </script>   
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">
+        Colorful Bubbles
+      </h1>
+      <p class="subtitle has-text-centered">
+        with <a href="https://paperjs.org">paper.js</a>
+      </p>
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half is-narrow">
+          Speed Control
+          <div id="speed-slider">
+            <div id="speed-handle" class="ui-slider-handle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas id="myCanvas" width=1000 height=1000 resize></canvas>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="container has-text-centered">
+        <strong>Colorful Bubbles</strong> by <a href="http://ilkyu.kr">Ilkyu Ju</a>.
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
