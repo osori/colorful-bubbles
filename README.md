@@ -7,5 +7,5 @@ Click anywhere on the canvas to generate more bubbles. To remove a bubble, simpl
 ## Built with
 [Paper.js](http://paperjs.org/) - Vector graphics framework that runs on HTML5 canvas
 
-## Demo
-You can try the demo [here](https://osori.github.io/colorful-bubbles/)
+## Try it now!
+Click [here](https://osori.github.io/colorful-bubbles/) to try the demo.
