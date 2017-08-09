@@ -1,7 +1,11 @@
 # colorful-bubbles
-Behold these colorful bubbles wander around... 
+Watch these little, colorful bubbles move on HTML5 canvas. 
+Click anywhere on the canvas to generate more bubbles. To remove a bubble, simply click the one you want to delete. You can also adjust the speed of bubbles using the slidebar.
 
 ![screenshot](https://raw.githubusercontent.com/osori/colorful-bubbles/master/colorful-bubbles.gif)
 
-## Demo
-You can see the demo here: https://osori.github.io/colorful-bubbles/
+## Built with
+[Paper.js](http://paperjs.org/) - Vector graphics framework that runs on HTML5 canvas
+
+## Try it now!
+Click [here](https://osori.github.io/colorful-bubbles/) to try the demo.
