@@ -42,11 +42,6 @@ function onFrame(event){
   }
 }
 
-var mousePos;
-function onMouseDrag(event){
-  mousePos = event.delta;
-}
-
 var hitPath;
 
 function onMouseDown(event){
@@ -70,9 +65,9 @@ function onMouseDown(event){
     var bubbleIndex = bubbles.indexOf(hitPath);
     if (i != -1) {
       bubbles.splice(bubbleIndex, 1);
+      destinations.splice(bubbleIndex, 1);
     }
     hitPath.remove();
-    destinations.pop();
     numCircles -= 1;
   }
   $('#numBubbles').text(bubbles.length);
