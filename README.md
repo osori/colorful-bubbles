@@ -1,6 +1,6 @@
 # colorful-bubbles
 Watch these little, colorful bubbles move on HTML5 canvas. 
-Click anywhere on the canvas to generate more bubbles. To remove a bubble, simply click the one you want to delete. You can also adjust the speed of the bubbles using the slidebar.
+Click anywhere on the canvas to generate more bubbles. To remove a bubble, simply click the one you want to delete. You can also adjust the speed of bubbles using the slidebar.
 
 ![screenshot](https://raw.githubusercontent.com/osori/colorful-bubbles/master/colorful-bubbles.gif)
 
